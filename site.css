@@ -75,7 +75,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     display: flex; align-items: center; gap: 10px;
     text-decoration: none;
 }
-.brand img { width: 32px; height: 32px; border-radius: var(--radius); }
+.brand img {
+    width: auto; height: 26px;
+    max-width: 76px;
+    object-fit: contain;
+}
 .brand span { font-weight: 700; font-size: 17px; color: var(--ink); }
 
 .nav-toggle {
