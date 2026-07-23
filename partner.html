@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJBPDDQL6F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WJBPDDQL6F');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Partner With Us | List Your School, Practice or NGO | Maatrum</title>
+<meta name="description" content="Add your special education school, therapy practice, or support organization to the Maatrum directory. Free to list, reviewed before publishing, serving families across Chennai.">
+<link rel="canonical" href="https://maatrum.netlify.app/partner.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maatrum">
+<meta property="og:title" content="Partner With Maatrum | Free Directory Listing">
+<meta property="og:description" content="List your school, therapy practice, or NGO in a directory used by parents looking for exactly what you offer.">
+<meta property="og:url" content="https://maatrum.netlify.app/partner.html">
+<meta property="og:image" content="https://maatrum.netlify.app/cover.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="">
+      <span>Maatrum</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="opportunities.html">Opportunities</a>
+      <a href="gvmnt.html">Government Initiatives</a>
+      <a href="partner.html" aria-current="page">Partner</a>
+      <a href="feedback.html">Feedback</a>
+      <a class="btn btn-sm" href="directory.html">Browse directory</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="page-head-inner">
+      <h1>Partner with Maatrum</h1>
+      <p>List your school, therapy practice, or organization in a directory used by
+         families who are looking for exactly what you offer. Listing is free.</p>
+    </div>
+  </section>
+
+  <section class="steps" aria-label="How listing works">
+    <ol class="steps-inner">
+      <li>
+        <span class="step-num">1</span>
+        <div>
+          <h2>Tell us about your organization</h2>
+          <p>Fill in the form below. It takes a few minutes.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div>
+          <h2>We review the details</h2>
+          <p>We confirm your services, location, and contact information before publishing.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div>
+          <h2>Your listing goes live</h2>
+          <p>Parents can find you by type, location, and the age groups you serve.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="form-section">
+    <div class="form-inner">
+
+      <div id="thanks" class="notice" hidden>
+        <h2>Thank you — we've received your details.</h2>
+        <p>We review new submissions regularly and will be in touch at the email address
+           you provided if we need anything further.</p>
+      </div>
+
+      <form name="partner"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/partner.html?submitted=1"
+            id="partner-form">
+
+        <!-- Netlify needs this to match the form name -->
+        <input type="hidden" name="form-name" value="partner">
+
+        <!-- Spam trap: hidden from people, tempting to bots -->
+        <p class="hp">
+          <label>Leave this field empty: <input name="bot-field"></label>
+        </p>
+
+        <fieldset>
+          <legend>About your organization</legend>
+
+          <div class="field">
+            <label for="org">Organization name <span aria-hidden="true">*</span></label>
+            <input id="org" name="organization" type="text" required autocomplete="organization">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="type">Type <span aria-hidden="true">*</span></label>
+              <select id="type" name="type" required>
+                <option value="">Please choose</option>
+                <option>School</option>
+                <option>Learning centre</option>
+                <option>Therapist / specialist</option>
+                <option>NGO / support group</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="location">Location <span aria-hidden="true">*</span></label>
+              <input id="location" name="location" type="text" required
+                     placeholder="Area and city" autocomplete="address-level2">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="services">Services offered <span aria-hidden="true">*</span></label>
+            <input id="services" name="services" type="text" required
+                   placeholder="e.g. autism support, speech therapy, dyslexia">
+            <small>Separate with commas. These help parents filter the directory.</small>
+          </div>
+
+          <div class="field">
+            <label for="ages">Age groups served</label>
+            <input id="ages" name="age_groups" type="text"
+                   placeholder="e.g. 3–12 years">
+          </div>
+
+          <div class="field">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="url"
+                   placeholder="https://" autocomplete="url">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>How we reach you</legend>
+
+          <div class="field">
+            <label for="contact">Contact person <span aria-hidden="true">*</span></label>
+            <input id="contact" name="contact_name" type="text" required autocomplete="name">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel"
+                     placeholder="+91">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+        </fieldset>
+
+        <p class="form-note">
+          We use these details only to review and publish your listing. Fields marked
+          <span aria-hidden="true">*</span> are required.
+        </p>
+
+        <button class="btn" type="submit">Submit for review</button>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>Maatrum &middot; Chennai, Tamil Nadu</span>
+    <span>
+      <a href="feedback.html">Feedback</a> &middot;
+      <a href="partner.html">Partner with us</a> &middot;
+      <a href="admin.html">Admin</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('site-nav');
+  t.addEventListener('click', function () {
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open);
+  });
+
+  // After Netlify redirects back with ?submitted=1, show the thank-you panel
+  if (new URLSearchParams(location.search).get('submitted')) {
+    document.getElementById('thanks').hidden = false;
+    document.getElementById('partner-form').hidden = true;
+    document.getElementById('thanks').scrollIntoView({ block: 'center' });
+  }
+</script>
+
+<script async type="module" src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"></script>
+<zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="cmmkmc323001euj5c4w457uw1"></zapier-interfaces-chatbot-embed>
+
+</body>
+</html>
