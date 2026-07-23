@@ -625,12 +625,39 @@ form legend {
 
     .site-nav {
         display: none;
-        flex-basis: 100%; flex-direction: column;
-        align-items: flex-start; gap: 14px;
-        padding-top: 14px;
+        flex-basis: calc(100% + 40px);
+        flex-direction: column;
+        align-items: stretch; gap: 0;
+        padding-top: 8px;
+        margin: 0 -20px;
     }
     .site-nav.open { display: flex; }
-    .site-nav .btn { width: 100%; text-align: center; }
+
+    /* Whole row is the tap target, not just the text */
+    .site-nav a {
+        display: block;
+        padding: 15px 20px;
+        min-height: 50px;
+        font-size: 15px;
+        border-top: 1px solid var(--rule);
+        -webkit-tap-highlight-color: transparent;
+    }
+    .site-nav a:first-child { border-top: none; }
+
+    /* Visible feedback on press */
+    .site-nav a:active { background: var(--tint); }
+    .site-nav a[aria-current="page"] {
+        background: var(--cream);
+        box-shadow: inset 3px 0 0 var(--amber);
+    }
+
+    .site-nav .btn {
+        width: auto; text-align: center;
+        margin: 12px 20px 6px;
+        padding: 14px 20px;
+        border-top: none;
+    }
+    .site-nav .btn:active { background: var(--amber-dark); }
 
     .hero { padding: 34px 20px 28px; }
     .hero-inner { flex-direction: column; text-align: center; gap: 24px; }
