@@ -524,6 +524,95 @@ form legend {
 .scheme-link:hover { color: var(--amber-dark); text-decoration: underline; }
 
 /* --------------------------------------------------------------------------
+   FAQ ACCORDION
+   -------------------------------------------------------------------------- */
+.faq-section { background: var(--cream); padding: 36px 44px 8px; }
+.faq-inner { max-width: 760px; margin: 0 auto; }
+
+.faq-group {
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+}
+.faq-group:first-child { margin-top: 0; }
+
+.faq {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.faq[open] { border-color: var(--rule-strong); }
+
+.faq summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 46px 16px 18px;
+    position: relative;
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    line-height: 1.5;
+    /* Comfortable tap target on mobile */
+    min-height: 52px;
+    display: flex; align-items: center;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--amber-dark); }
+
+/* Chevron */
+.faq summary::after {
+    content: "";
+    position: absolute; right: 18px; top: 50%;
+    width: 9px; height: 9px;
+    border-right: 2.5px solid var(--amber);
+    border-bottom: 2.5px solid var(--amber);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+.faq[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+
+.faq-body {
+    padding: 0 18px 18px;
+    border-top: 1px solid var(--rule);
+    padding-top: 14px;
+}
+.faq-body p {
+    font-size: 14.5px; line-height: 1.7; margin-bottom: 10px;
+}
+.faq-body p:last-child { margin-bottom: 0; }
+.faq-body em { color: var(--ink-faint); }
+
+/* --------------------------------------------------------------------------
+   ASK BOX
+   -------------------------------------------------------------------------- */
+.ask-heading {
+    font-size: 19px; font-weight: 700; color: var(--ink); margin-bottom: 6px;
+}
+.ask-intro { font-size: 14.5px; margin-bottom: 20px; }
+
+/* --------------------------------------------------------------------------
+   INLINE FAQ (on other pages)
+   -------------------------------------------------------------------------- */
+.faq-inline {
+    background: var(--white);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 40px 44px;
+}
+.faq-inline-inner { max-width: 760px; margin: 0 auto; }
+.faq-inline h2 {
+    font-size: 19px; font-weight: 700; color: var(--ink); margin-bottom: 16px;
+}
+.faq-inline .faq { background: var(--cream); }
+.faq-more {
+    display: inline-block; margin-top: 6px;
+    font-size: 13.5px; font-weight: 700;
+    color: var(--amber); text-decoration: none;
+}
+.faq-more:hover { text-decoration: underline; }
+
+/* --------------------------------------------------------------------------
    RESPONSIVE
    -------------------------------------------------------------------------- */
 @media (max-width: 900px) {
@@ -589,6 +678,11 @@ form legend {
     .scheme { padding: 20px 18px; }
     .scheme-top { flex-direction: column; gap: 8px; }
     .tag { align-self: flex-start; }
+
+    .faq-section { padding: 24px 20px 4px; }
+    .faq summary { padding: 15px 42px 15px 15px; font-size: 14.5px; }
+    .faq-body { padding: 13px 15px 16px; }
+    .faq-inline { padding: 28px 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
