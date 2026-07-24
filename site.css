@@ -617,6 +617,100 @@ form legend {
 .faq-more:hover { text-decoration: underline; }
 
 /* --------------------------------------------------------------------------
+   EVENTS
+   -------------------------------------------------------------------------- */
+.ev-controls {
+    background: var(--white);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 44px;
+}
+.ev-controls-inner {
+    max-width: 760px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 14px; flex-wrap: wrap;
+}
+
+.view-switch { display: flex; }
+.vs-btn {
+    font-family: inherit; font-size: 12.5px; font-weight: 600;
+    color: var(--ink-soft); background: var(--white);
+    border: 1px solid var(--rule-strong);
+    padding: 8px 16px; cursor: pointer;
+}
+.vs-btn:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.vs-btn:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; border-left: none; }
+.vs-btn.is-active { background: var(--amber); border-color: var(--amber); color: #fff; }
+
+.events { background: var(--cream); padding: 28px 44px 52px; }
+.events-inner { max-width: 760px; margin: 0 auto; }
+
+.ev-month {
+    font-size: 12.5px; font-weight: 700; color: var(--ink-faint);
+    letter-spacing: 0.04em; text-transform: uppercase;
+    padding-bottom: 8px; margin: 24px 0 12px;
+    border-bottom: 1px solid var(--rule);
+}
+.ev-month:first-child { margin-top: 0; }
+
+.event {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 10px;
+    display: flex; gap: 15px;
+    transition: border-color 0.2s ease;
+}
+.event:hover { border-color: var(--rule-strong); }
+.event[hidden] { display: none; }
+
+.ev-date {
+    flex: none; width: 48px; text-align: center;
+    display: flex; flex-direction: column; justify-content: flex-start;
+}
+.ev-dow {
+    font-size: 11px; font-weight: 700; color: var(--amber);
+    letter-spacing: 0.05em; text-transform: uppercase;
+}
+.ev-day {
+    font-size: 24px; font-weight: 700; color: var(--ink); line-height: 1.15;
+}
+
+.ev-body {
+    flex: 1; min-width: 0;
+    border-left: 1px solid var(--rule); padding-left: 15px;
+}
+.ev-body h3 {
+    font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 7px;
+}
+
+.ev-meta { list-style: none; margin-bottom: 9px; }
+.ev-meta li {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 13px; color: var(--ink-soft); line-height: 1.75;
+}
+.ev-meta svg { width: 15px; height: 15px; flex: none; color: var(--amber); }
+
+.ev-desc {
+    font-size: 13.5px; line-height: 1.65; margin-bottom: 10px;
+}
+
+.ev-cost {
+    display: inline-block;
+    font-size: 11.5px; font-weight: 700;
+    color: var(--amber); background: var(--tint);
+    border-radius: 100px; padding: 4px 11px;
+}
+
+.ev-cta {
+    display: inline-block; margin-left: 10px;
+    font-size: 13px; font-weight: 700;
+    color: var(--amber); text-decoration: none;
+}
+.ev-cta:hover { text-decoration: underline; }
+
+/* --------------------------------------------------------------------------
    RESPONSIVE
    -------------------------------------------------------------------------- */
 @media (max-width: 900px) {
@@ -714,6 +808,16 @@ form legend {
     .faq summary { padding: 15px 42px 15px 15px; font-size: 14.5px; }
     .faq-body { padding: 13px 15px 16px; }
     .faq-inline { padding: 28px 20px; }
+
+    /* Calendar is desktop-only — the library never loads on a phone */
+    .view-switch { display: none; }
+    .ev-controls { padding: 14px 20px; }
+    .events { padding: 20px 20px 40px; }
+    .event { padding: 14px; gap: 12px; }
+    .ev-date { width: 42px; }
+    .ev-day { font-size: 21px; }
+    .ev-body { padding-left: 12px; }
+    .ev-body h3 { font-size: 15px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
